@@ -122,7 +122,6 @@ S3](https://aws.amazon.com/s3/); more on this in the near future.
 -   [Heroku Command Line](https://devcenter.heroku.com/categories/command-line)
 -   [Heroku Rails Deployment](https://devcenter.heroku.com/articles/getting-started-with-rails4)
 
-
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
