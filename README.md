@@ -38,17 +38,6 @@ things you'll need to do first.
 Now you're set up to use Heroku. To deploy a new application
 to Heroku:
 
--   [ ] Navigate into your express-api-template to `app/middleware/mongoose.js` and replace the following line:
-
-``` js
-const uri = process.env.MONGOLAB_URI || 'mongodb://localhost/<your project name>';
-```
-
-with
-
-``` js
-const uri = process.env.MONGODB_URI || 'mongodb://localhost/<your project name>';
-```
 
 -   [ ] Run `heroku create` in the command line in the root of your Rails API to
     create a new (blank) app on Heroku.
@@ -60,6 +49,7 @@ const uri = process.env.MONGODB_URI || 'mongodb://localhost/<your project name>'
 -  [ ] in terminal, run : `heroku create`
 -  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic url.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
 -  [ ] go to your heroku dashboard, click on newly created heroku app, click on resources tab, search for and add mLab for Add-Ons
+-  [ ] **OR** `$ heroku addons:create mongolab:sandbox`
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run : `echo SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')` this should generate a secret_key
@@ -121,6 +111,9 @@ S3](https://aws.amazon.com/s3/); more on this in the near future.
 <img width="400" alt="herokuapp_png_1_366x768_pixels" src="http://www.thehinzadventures.com/wp-content/uploads/2015/03/54843046.jpg">
 
 ## Troubleshooting
+
+-  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
+- 
 
 
 
