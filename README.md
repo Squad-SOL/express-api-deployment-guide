@@ -113,7 +113,7 @@ S3](https://aws.amazon.com/s3/); more on this in the near future.
 ## Troubleshooting
 
 -  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
-- 
+- [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)
 
 
 
@@ -121,6 +121,7 @@ S3](https://aws.amazon.com/s3/); more on this in the near future.
 
 -   [Heroku Command Line](https://devcenter.heroku.com/categories/command-line)
 -   [Heroku Rails Deployment](https://devcenter.heroku.com/articles/getting-started-with-rails4)
+
 
 ## [License](LICENSE)
 
