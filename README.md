@@ -2,7 +2,7 @@
 
 # Express Deployment with Heroku
 
-You've learned a lot about how to build a Rails application over the last few
+You've learned a lot about how to build a Node application over the last few
 weeks. Now let's 'go public' and share our apps with the world!
 
 ## Prerequisites
@@ -113,7 +113,7 @@ S3](https://aws.amazon.com/s3/); more on this in the near future.
 ## Troubleshooting
 
 -  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
-- [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)
+- [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)ah
 
 
 
