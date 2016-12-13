@@ -43,7 +43,7 @@ to Heroku:
 -  [ ] Push your latest code to Heroku (`git push heroku master`)
 -  [ ] commit to your local master branch
 -  [ ] in terminal, run : `heroku create`
--  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic url.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
+-  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic ORIGIN.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
 -  [ ] Add any addons`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
@@ -54,9 +54,9 @@ SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')
 ```
 this should generate a secret_key
 -  [ ] in terminal run: `heroku config:set <copy and paste secret_key generated from last command>` .   should start with “SECRET_KEY and span about 40 randomized characters”
--  [ ] you need to set your client url so that your deployed API will ONLY accept requests from the correct domain. IF you're client is deployed on Github, your url will be:
+-  [ ] you need to set your client ORIGIN so that your deployed API will ONLY accept requests from the correct domain. IF you're client is deployed on Github, your ORIGIN will be:
       `https://<% github username %>.github.io`
--  [ ] Set your client url by:
+-  [ ] Set your client ORIGIN by:
       `heroku config:set CLIENT_URL="https://<% github username %>.github.io"`
 -  [ ] You should have three config variables set in heroku (`heroku>settings>config vars`): MONGODB_URI, SECRET_KEY, CLIENT_URL
 -  [ ] Once all three of these are set, run in terminal: `heroku restart`
