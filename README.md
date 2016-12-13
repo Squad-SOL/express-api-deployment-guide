@@ -7,9 +7,8 @@ weeks. Now let's 'go public' and share our apps with the world!
 
 ## Prerequisites
 
--   [ga-wdi-boston/rails-api](https://github.com/ga-wdi-boston/rails-api)
--   [ga-wdi-boston/rails-activerecord-crud](https://github.com/ga-wdi-boston/rails-activerecord-crud)
--   This guide assumes you have followed [these installation instructions](https://github.com/ga-wdi-boston/rails-api-template#installation) unequivocally.
+- [Express Api](https://github.com/ga-wdi-boston/express-api)
+-   This guide assumes you have followed [these installation instructions](https://github.com/ga-wdi-boston/express-api-template#installation) unequivocally.
 ## Objectives
 
 -   Create a Heroku app from the command line
@@ -39,7 +38,7 @@ Now you're set up to use Heroku. To deploy a new application
 to Heroku:
 
 
--   [ ] Run `heroku create` in the command line in the root of your Rails API to
+-   [ ] Run `heroku create` in the command line in the root of your Express API to
     create a new (blank) app on Heroku.
 -   [ ] Push your latest code to Heroku (`git push heroku master`)
 -   [ ] Tell Heroku to run your migration files (`heroku run rake db:migrate`).
@@ -111,14 +110,13 @@ S3](https://aws.amazon.com/s3/).
 ## Troubleshooting
 
 -  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
-- [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)ah
+- [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)
 
 
 
 ## Additional Resources
 
 -   [Heroku Command Line](https://devcenter.heroku.com/categories/command-line)
--   [Heroku Rails Deployment](https://devcenter.heroku.com/articles/getting-started-with-rails4)
 
 ## [License](LICENSE)
 
