@@ -106,9 +106,7 @@ Then, hit Ctrl-D to get out of heroku bash shell. If you re-open the shell and
 run `ls -l`, `happy.txt` will be missing!
 
 The typical workaround is to save files in cloud storage such as [Amazon
-S3](https://aws.amazon.com/s3/); more on this in the near future.
-
-<img width="400" alt="herokuapp_png_1_366x768_pixels" src="http://www.thehinzadventures.com/wp-content/uploads/2015/03/54843046.jpg">
+S3](https://aws.amazon.com/s3/).
 
 ## Troubleshooting
 
