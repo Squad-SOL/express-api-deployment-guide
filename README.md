@@ -47,11 +47,15 @@ to Heroku:
 -  [ ] commit to your local master branch
 -  [ ] in terminal, run : `heroku create`
 -  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic url.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
--  [ ] go to your heroku dashboard, click on newly created heroku app, click on resources tab, search for and add mLab for Add-Ons
--  [ ] **OR** `$ heroku addons:create mongolab:sandbox`
+-  [ ] $ heroku addons:create mongolab:sandbox`
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
--  [ ] in terminal, run : `echo SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')` this should generate a secret_key
+-  [ ] in terminal, run :
+```
+echo
+SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')
+```
+this should generate a secret_key
 -  [ ] in terminal run: `heroku config:set <copy and paste secret_key generated from last command>` .   should start with “SECRET_KEY and span about 40 randomized characters”
 -  [ ] you need to set your client url so that your deployed API will ONLY accept requests from the correct domain. IF you're client is deployed on Github, your url will be:
       `https://<% github username %>.github.io`
