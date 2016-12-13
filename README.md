@@ -40,14 +40,11 @@ to Heroku:
 
 -   [ ] Run `heroku create` in the command line in the root of your Express API to
     create a new (blank) app on Heroku.
--   [ ] Push your latest code to Heroku (`git push heroku master`)
--   [ ] Tell Heroku to run your migration files (`heroku run rake db:migrate`).
-    If you have any other rake tasks that need to run (e.g. `rake db:seed`), run
-    those with `heroku run` as well.
+-  [ ] Push your latest code to Heroku (`git push heroku master`)
 -  [ ] commit to your local master branch
 -  [ ] in terminal, run : `heroku create`
 -  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic url.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
--  [ ] $ heroku addons:create mongolab:sandbox`
+-  [ ] Add any addons`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run :
