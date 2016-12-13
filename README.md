@@ -38,11 +38,10 @@ Now you're set up to use Heroku. To deploy a new application
 to Heroku:
 
 
--   [ ] Run `heroku create` in the command line in the root of your Express API to
+-  [ ] Run `heroku create` in the command line in the root of your Express API to
     create a new (blank) app on Heroku.
--  [ ] Push your latest code to Heroku (`git push heroku master`)
 -  [ ] commit to your local master branch
--  [ ] in terminal, run : `heroku create`
+-  [ ] Push your latest code to Heroku (`git push heroku master`)
 -  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic ORIGIN.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
 -  [ ] Add any addons`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
