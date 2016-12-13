@@ -42,8 +42,7 @@ to Heroku:
     create a new (blank) app on Heroku.
 -  [ ] commit to your local master branch
 -  [ ] Push your latest code to Heroku (`git push heroku master`)
--  [ ] in terminal run : `git remote -v` - make sure that heroku remote repo is pointing towards the newly created heroic ORIGIN.   IF NOT, run this in terminal : `git remote set-url heroku <copy and paste the URL of your heroiku hosted app that you just created in step above>`
--  [ ] Add any addons`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
+-  [ ] Add any addons e.g.`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run :
@@ -56,8 +55,8 @@ this should generate a secret_key
 -  [ ] you need to set your client ORIGIN so that your deployed API will ONLY accept requests from the correct domain. IF you're client is deployed on Github, your ORIGIN will be:
       `https://<% github username %>.github.io`
 -  [ ] Set your client ORIGIN by:
-      `heroku config:set CLIENT_URL="https://<% github username %>.github.io"`
--  [ ] You should have three config variables set in heroku (`heroku>settings>config vars`): MONGODB_URI, SECRET_KEY, CLIENT_URL
+      `heroku config:set CLIENT_ORIGIN="https://<% github username %>.github.io"`
+-  [ ] You should have three config variables set in heroku (`heroku>settings>config vars`): MONGODB_URI, SECRET_KEY, CLIENT_ORIGIN
 -  [ ] Once all three of these are set, run in terminal: `heroku restart`
 -  [ ] Then in terminal, run: `heroku open`
 
