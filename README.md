@@ -46,11 +46,10 @@ to Heroku:
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run :
-```
-echo
-SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')
-```
-this should generate a secret_key
+        ```
+        echo SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n')
+        ```
+    this should generate a secret_key
 -  [ ] in terminal run: `heroku config:set <copy and paste secret_key generated from last command>` .   should start with “SECRET_KEY and span about 40 randomized characters”
 -  [ ] you need to set your client ORIGIN so that your deployed API will ONLY accept requests from the correct domain. IF you're client is deployed on Github, your ORIGIN will be:
       `https://<% github username %>.github.io`
