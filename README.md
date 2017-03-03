@@ -23,11 +23,11 @@ Now you're set up to use Heroku. To deploy a new application
 to Heroku:
 
 
--  [ ] Run `heroku create` in the command line in the root of your Express API to
-    create a new (blank) app on Heroku.
+-  [ ] Run `heroku create` in the command line in the root of you Express API to create a new (blank) app on Heroku.
 -  [ ] commit to your local master branch
 -  [ ] Push your latest code to Heroku (`git push heroku master`)
--  [ ] Add any addons e.g.`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
+-  [ ] Add any addons `e.g. mlab to create a deployed database`
+-  [ ] [mlab add on steps](https://github.com/ga-wdi-boston/express-api-deployment-guide#creating-mlab-addon)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run :
@@ -45,6 +45,31 @@ to Heroku:
 -  [ ] Then in terminal, run: `heroku open`
 
 A full list of Heroku commands can be accessed by running `heroku --help`
+
+## Creating Mlab addon
+
+-  [ ] Run heroku create:addons with mongolab:sandbox `$ heroku addons:create mongolab:sandbox`
+
+The first time you run the above command you'll see a message like this:
+
+```
+Creating mongolab:sandbox on ⬢ pacific-cliffs-91276... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+```
+-  [ ] You need to go to that URL, enter in your credit card information and then re-run the command again. This time you should see something like:
+
+```
+~/wdi/projects/group-project/TimeCapsule-Backend (master)$ heroku addons:create mongolab:sandbox
+Creating mongolab:sandbox on ⬢ pacific-cliffs-91276... free
+Welcome to mLab.  Your new subscription is being created and will be available shortly.  Please consult the mLab Add-on Admin UI to check on its progress.
+Created mongolab-cubed-11237 as MONGODB_URI
+Use heroku addons:docs mongolab to view documentation
+```
+
+Now you can log into your heroku dashboard, go to add-ons and click the mlab link.  This will bring you to your mlab database.
+
+**[return to Deploying Heroku](https://github.com/ga-wdi-boston/express-api-deployment-guide#deploying-to-heroku)**
 
 
 ## WARNING: Ephemeral Filesystem.
