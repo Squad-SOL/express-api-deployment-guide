@@ -16,7 +16,7 @@ weeks. Now let's 'go public' and share our apps with the world!
 -   Push the latest code to Heroku
 -   Migrate the production database
 
-## Getting Set Up
+## Create a Heroku account
 
 Before you can begin deploying your applications to Heroku, there are some
 things you'll need to do first.
@@ -29,7 +29,6 @@ things you'll need to do first.
     your Heroku credentials when asked. Once you log in, if you're prompted
     to add these credentials to your keychain, say yes. *You will not be able*
     *to see your password*
-1.  **sign up for mlab at mlab.com** / click link in verification email
 1.  **Credit card information needs to be submitted on heroku** - looks like as long as you don’t MASSIVELY populate your database, you’re credit card will not be charged
 1.  **Make sure you have heroku tool belt installed for MAC**
 
@@ -60,33 +59,10 @@ to Heroku:
 -  [ ] Once all three of these are set, run in terminal: `heroku restart`
 -  [ ] Then in terminal, run: `heroku open`
 
-## Heroku Command Reference
-
-A full list of Heroku commands can be access by running `heroku --help`; below
-are some of the more common ones.
-
-|                Commands                |                                                 Behavior                                                 |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-|           `heroku apps:info`           |                                  Get info about ALL of our Heroku apps.                                  |
-| `heroku apps:info --app {name_of_app}` |                                  Get info about a specific Heroku app.                                   |
-| `heroku apps:open --app {name_of_app}` |            Open any given Heroku app <br> (other than the one we're currently working with.)             |
-|             `heroku logs`              |                                   Logs from the currently running app.                                   |
-|              `heroku ps`               |                              Processes running in your heroku application.                               |
-|           `heroku releases`            |      Each time you deploy to heroku you are creating a "release". This command shows all releases.       |
-|            `heroku pg:info`            | Access Postgres from within Heroku and show the heroku plan, connections, pg version, data size, tables. |
-|            `heroku pg:psql`            |                                      ... and open a `psql` console.                                      |
-|            `heroku run ...`            |                                    Run a program from within Heroku.                                     |
-|            `heroku config`             |                           Environmental variables in your current Heroku app.                            |
-|            `heroku config:set SECRET_KEY_BASE=$(rake secret)`            |                                    Set Secret Key                                     |
-|            `heroku config:set SECRET_TOKEN=$(rake secret)`            |                                    Set TOKEN                                     |
-|            `heroku config:set CLIENT_ORIGIN=https://yourgithubname.github.io`            |                                    Set CLIENT_ORIGIN                                     |
-|            `heroku apps:rename newname (optional)`            |                                    Rename heroku app name (entirely optional)                                     |
-|            `heroku restart`            |                                    restart heroku                                     |
-|            `heroku open`            |                                    Open your heroku app in default browser                                     |
-|            `heroku --help`            |                                    Displays a heroku CLI usage summary.                                     |
-
+A full list of Heroku commands can be accessed by running `heroku --help`
 
 ## WARNING: Ephemeral Filesystem.
+
 
 One serious limitation of Heroku is that it provides an 'ephemeral filesystem';
 in other words, if you try to save a new file inside the repo (e.g. an uploaded
