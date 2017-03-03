@@ -61,8 +61,8 @@ to Heroku:
 
 A full list of Heroku commands can be accessed by running `heroku --help`
 
-## WARNING: Ephemeral Filesystem.
 
+## WARNING: Ephemeral Filesystem.
 
 One serious limitation of Heroku is that it provides an 'ephemeral filesystem';
 in other words, if you try to save a new file inside the repo (e.g. an uploaded
@@ -84,6 +84,7 @@ S3](https://aws.amazon.com/s3/).
 
 ## Troubleshooting
 
+-  **First step upon encountering an issue should be to run `heroku logs` to read the logs of your deployed heroku server**
 -  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
 - [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)
 
