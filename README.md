@@ -16,21 +16,6 @@ weeks. Now let's 'go public' and share our apps with the world!
 -   Push the latest code to Heroku
 -   Migrate the production database
 
-## Create a Heroku account
-
-Before you can begin deploying your applications to Heroku, there are some
-things you'll need to do first.
-
-1.  **Create a Heroku account**, at [https://www.heroku.com](https://www.heroku.com).
-    You will be sent an activation email, so be sure to check your inbox so that
-    you can activate your account.
-1.  Install the Heroku Command Line Tools: run `brew install heroku`.
-1.  **Log into Heroku** by running `heroku login` from the console and providing
-    your Heroku credentials when asked. Once you log in, if you're prompted
-    to add these credentials to your keychain, say yes. *You will not be able*
-    *to see your password*
-1.  **Credit card information needs to be submitted on heroku** - looks like as long as you don’t MASSIVELY populate your database, you’re credit card will not be charged
-1.  **Make sure you have heroku tool belt installed for MAC**
 
 ## Deploying to Heroku
 
