@@ -20,7 +20,7 @@ weeks. Now let's 'go public' and share our apps with the world!
 
 ## Deploying to Heroku
 
-Now you're set up to use Heroku. To deploy a new application
+Begin inside the root directory of your application (the directory you just renamed to <your-app> from `express-api-template`) deploy a new application
 to Heroku:
 
 
