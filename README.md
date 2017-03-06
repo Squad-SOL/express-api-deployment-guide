@@ -48,7 +48,7 @@ A full list of Heroku commands can be accessed by running `heroku --help`
 
 ## Creating Mlab addon
 
--  [ ] Run heroku create:addons with mongolab:sandbox `$ heroku addons:create mongolab:sandbox`
+-  [ ] Run heroku addons:create with mongolab:sandbox `$ heroku addons:create mongolab:sandbox`
 
 The first time you run the above command you'll see a message like this:
 
