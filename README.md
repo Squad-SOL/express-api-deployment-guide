@@ -9,40 +9,26 @@ weeks. Now let's 'go public' and share our apps with the world!
 
 - [Express Api](https://github.com/ga-wdi-boston/express-api)
 -   This guide assumes you have followed [these installation instructions](https://github.com/ga-wdi-boston/express-api-template#installation) unequivocally.
+- [Heroku Account and Toolbelt CLI](https://github.com/ga-wdi-boston/rails-heroku-setup-guide#getting-set-up)
+
 ## Objectives
 
 -   Create a Heroku app from the command line
 -   Push the latest code to Heroku
 -   Migrate the production database
 
-## Getting Set Up
-
-Before you can begin deploying your applications to Heroku, there are some
-things you'll need to do first.
-
-1.  **Create a Heroku account**, at [https://www.heroku.com](https://www.heroku.com).
-    You will be sent an activation email, so be sure to check your inbox so that
-    you can activate your account.
-1.  Install the Heroku Command Line Tools: run `brew install heroku`.
-1.  **Log into Heroku** by running `heroku login` from the console and providing
-    your Heroku credentials when asked. Once you log in, if you're prompted
-    to add these credentials to your keychain, say yes. *You will not be able*
-    *to see your password*
-1.  **sign up for mlab at mlab.com** / click link in verification email
-1.  **Credit card information needs to be submitted on heroku** - looks like as long as you don’t MASSIVELY populate your database, you’re credit card will not be charged
-1.  **Make sure you have heroku tool belt installed for MAC**
 
 ## Deploying to Heroku
 
-Now you're set up to use Heroku. To deploy a new application
+Begin inside the root directory of your application (the directory you just renamed to <your-app> from `express-api-template`) deploy a new application
 to Heroku:
 
 
--  [ ] Run `heroku create` in the command line in the root of your Express API to
-    create a new (blank) app on Heroku.
+-  [ ] Run `heroku create` in the command line in the root of you Express API to create a new (blank) app on Heroku.
 -  [ ] commit to your local master branch
 -  [ ] Push your latest code to Heroku (`git push heroku master`)
--  [ ] Add any addons e.g.`$ heroku addons:create mongolab:sandbox` [more on addons](https://github.com/ga-wdi-boston/express-api-deployment-guide/#troubleshooting)
+-  [ ] Add any addons `e.g. mlab to create a deployed database`
+-  [ ] [mlab add on steps](https://github.com/ga-wdi-boston/express-api-deployment-guide#creating-mlab-addon)
 -  [ ] in terminal, run : `git push heroku master`  (should build your site)
 -  [ ] due to the first line of code in the `server.js` file, the default deployment environment will be `production`
 -  [ ] in terminal, run :
@@ -59,30 +45,32 @@ to Heroku:
 -  [ ] Once all three of these are set, run in terminal: `heroku restart`
 -  [ ] Then in terminal, run: `heroku open`
 
-## Heroku Command Reference
+A full list of Heroku commands can be accessed by running `heroku --help`
 
-A full list of Heroku commands can be access by running `heroku --help`; below
-are some of the more common ones.
+## Creating Mlab addon
 
-|                Commands                |                                                 Behavior                                                 |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-|           `heroku apps:info`           |                                  Get info about ALL of our Heroku apps.                                  |
-| `heroku apps:info --app {name_of_app}` |                                  Get info about a specific Heroku app.                                   |
-| `heroku apps:open --app {name_of_app}` |            Open any given Heroku app <br> (other than the one we're currently working with.)             |
-|             `heroku logs`              |                                   Logs from the currently running app.                                   |
-|              `heroku ps`               |                              Processes running in your heroku application.                               |
-|           `heroku releases`            |      Each time you deploy to heroku you are creating a "release". This command shows all releases.       |
-|            `heroku pg:info`            | Access Postgres from within Heroku and show the heroku plan, connections, pg version, data size, tables. |
-|            `heroku pg:psql`            |                                      ... and open a `psql` console.                                      |
-|            `heroku run ...`            |                                    Run a program from within Heroku.                                     |
-|            `heroku config`             |                           Environmental variables in your current Heroku app.                            |
-|            `heroku config:set SECRET_KEY_BASE=$(rake secret)`            |                                    Set Secret Key                                     |
-|            `heroku config:set SECRET_TOKEN=$(rake secret)`            |                                    Set TOKEN                                     |
-|            `heroku config:set CLIENT_ORIGIN=https://yourgithubname.github.io`            |                                    Set CLIENT_ORIGIN                                     |
-|            `heroku apps:rename newname (optional)`            |                                    Rename heroku app name (entirely optional)                                     |
-|            `heroku restart`            |                                    restart heroku                                     |
-|            `heroku open`            |                                    Open your heroku app in default browser                                     |
-|            `heroku --help`            |                                    Displays a heroku CLI usage summary.                                     |
+-  [ ] Run heroku addons:create with mongolab:sandbox `$ heroku addons:create mongolab:sandbox`
+
+The first time you run the above command you'll see a message like this:
+
+```
+Creating mongolab:sandbox on ⬢ pacific-cliffs-91276... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+```
+-  [ ] You need to go to that URL, enter in your credit card information and then re-run the command again. This time you should see something like:
+
+```
+~/wdi/projects/group-project/TimeCapsule-Backend (master)$ heroku addons:create mongolab:sandbox
+Creating mongolab:sandbox on ⬢ pacific-cliffs-91276... free
+Welcome to mLab.  Your new subscription is being created and will be available shortly.  Please consult the mLab Add-on Admin UI to check on its progress.
+Created mongolab-cubed-11237 as MONGODB_URI
+Use heroku addons:docs mongolab to view documentation
+```
+
+Now you can log into your heroku dashboard, go to add-ons and click the mlab link.  This will bring you to your mlab database.
+
+**[return to Deploying Heroku](https://github.com/ga-wdi-boston/express-api-deployment-guide#deploying-to-heroku)**
 
 
 ## WARNING: Ephemeral Filesystem.
@@ -107,6 +95,7 @@ S3](https://aws.amazon.com/s3/).
 
 ## Troubleshooting
 
+-  **First step upon encountering an issue should be to run `heroku logs` to read the logs of your deployed heroku server**
 -  [Heroku Addons](https://devcenter.heroku.com/articles/managing-add-ons) and [mLab MongoDB](https://elements.heroku.com/addons/mongolab)
 - [Previous Issues](https://github.com/ga-wdi-boston/group-project/issues?utf8=%E2%9C%93&q=is%3Aissue%20deploy%2C%20heroku)
 
